@@ -78,7 +78,7 @@ internal class Program
         GoldResultPrinter.PrintSingleValue(Math.Round(avgPrice2024, 2), "Average Gold Price 2024");
 
         var top = analysisService.Top(new DateTime(2020, 01, 01), new DateTime(2025, 01, 01), 1);
-        var bot = analysisService.Bottom(new DateTime(2019, 01, 01), new DateTime(2025, 01, 01), 1);
+        var bot = analysisService.Bottom(new DateTime(2020, 01, 01), new DateTime(2025, 01, 01), 1);
 
         GoldResultPrinter.PrintPrices(top.ToList(), "Best price");
         GoldResultPrinter.PrintPrices(bot.ToList(), "Lowest price");
