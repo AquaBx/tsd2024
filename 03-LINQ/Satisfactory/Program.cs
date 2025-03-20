@@ -26,6 +26,11 @@ class CustomCollection<T>
     {
         return _items.Count == 0;
     }
+    
+    public int Size()
+    {
+        return _items.Count;
+    }
 }
 
 internal class Program
@@ -39,5 +44,18 @@ internal class Program
         Console.WriteLine(isLeapYearM(2008)); // true
         Console.WriteLine(isLeapYearM(1900)); // false
         Console.WriteLine(isLeapYearM(2000)); // true
+        
+        var col = new CustomCollection<int>();
+        col.Add(1);
+        col.Add(2);
+        col.Add(3);
+        col.Add(4);
+
+        for (int i = 0; i < col.Size(); i++)
+        {
+            Console.WriteLine(col.Get(i));
+        }
+        
+        Console.WriteLine(col.IsEmpty());
     }
 }
